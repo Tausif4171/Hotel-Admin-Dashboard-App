@@ -20,10 +20,10 @@ export default function Navbar() {
                             background: '#323130',
                             borderRadius: '20px',
                             padding: '0px 10px 0px 10px',
-                            height: '50px',
+                            height: '36px',
                             display: 'flex',
                             alignItems: 'center',
-                            marginTop: '6px'
+                            marginTop: '12px'
                         }}>New Hotel</h4>
                     </Link>
                 </div>
