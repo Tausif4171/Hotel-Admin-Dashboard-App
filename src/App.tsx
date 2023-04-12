@@ -9,7 +9,7 @@ import NotFound from "./components/NotFound";
 function App() {
   return (
     <div className="App">
-      <h2 style={{ color: "orange" }}>Hotel App</h2>
+      {/* <h2 style={{ color: "orange" }}>Hotel App</h2> */}
       <Routes>
         <Route path='/' element={<Card />} />
         <Route path="/create" element={<Create />} />
