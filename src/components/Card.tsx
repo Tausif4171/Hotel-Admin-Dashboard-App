@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { onSnapshot } from 'firebase/firestore'
+import { hotelsCollection } from '../lib/Controller'
 
 export default function Card() {
   useEffect(() => {
