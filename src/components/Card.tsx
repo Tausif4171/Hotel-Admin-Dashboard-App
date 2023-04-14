@@ -4,8 +4,14 @@ import { hotelsCollection } from '../lib/Controller'
 
 export default function Card() {
   useEffect(() => {
-    onSnapshot(hotelsCollection,()=>{
-      
+    onSnapshot(hotelsCollection, (snapshot) => {
+      console.log('snapshot', snapshot.docs.map((doc) => {
+        return {
+          id: doc.id,
+          ...doc.data()
+        }
+      }))
+
     })
   })
   return (
