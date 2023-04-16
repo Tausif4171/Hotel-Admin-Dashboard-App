@@ -24,9 +24,12 @@ export default function Card() {
       <h3 style={{ color: "orange" }}>All Hotels</h3>
       {
         hotels.map((item) => {
+          const { id, title, country, description, fearure, location, perNight, region, review, stars, totalPrice } = item
           return (
 
-            <div>{item.title}</div>
+            <div>
+              <h3>{title}</h3>
+            </div>
           )
         })
       }
