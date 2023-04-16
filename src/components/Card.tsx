@@ -28,7 +28,10 @@ export default function Card() {
           return (
 
             <div>
-              <h3>{title}</h3>
+              <h3>{title}{" - "}{totalPrice}</h3>
+              <h5>{location}{" - "}{region}</h5>
+              <h5>{review}</h5>
+              <p>{description}</p>
             </div>
           )
         })
