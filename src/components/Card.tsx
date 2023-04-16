@@ -22,6 +22,14 @@ export default function Card() {
   return (
     <div>
       <h3 style={{ color: "orange" }}>All Hotels</h3>
+      {
+        hotels.map((item) => {
+          return (
+
+            <div>{item.title}</div>
+          )
+        })
+      }
     </div>
   )
 }
