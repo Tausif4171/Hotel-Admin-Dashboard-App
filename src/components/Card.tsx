@@ -38,7 +38,7 @@ export default function Card() {
       } */}
       {hotels && hotels.length ? hotels?.map((hotel) => {
         return (
-          <Information hotel={hotel} />
+          <Information key={hotel.id} hotel={hotel} />
         )
       }) : <>
         <h3>There are no hotels. Please add one.</h3>
