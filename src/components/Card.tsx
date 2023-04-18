@@ -40,7 +40,9 @@ export default function Card() {
         return (
           <Information hotel={hotel} />
         )
-      }) : <></>}
+      }) : <>
+        <h3>There are no hotels. Please add one.</h3>
+      </>}
     </div>
   )
 }
