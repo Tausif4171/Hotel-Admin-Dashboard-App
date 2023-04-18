@@ -18,7 +18,7 @@ export default function Card() {
 
     })
   }, [])
-  console.log('hotels', hotels)
+  // console.log('hotels', hotels)
   return (
     <div>
       <h3 style={{ color: "orange" }}>All Hotels</h3>
