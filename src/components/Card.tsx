@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { DocumentData, QuerySnapshot, onSnapshot } from 'firebase/firestore'
 import { hotelsCollection } from '../lib/Controller'
 import { NewHotelType } from '../types/hotels'
-
+import Information from './Information'
 export default function Card() {
   const [hotels, setHotels] = useState<NewHotelType[]>([])
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function Card() {
   return (
     <div>
       <h3 style={{ color: "orange" }}>All Hotels</h3>
-      {
+      {/* {
         hotels.map((item) => {
           const { id, title, country, description, fearure, location, perNight, region, review, stars, totalPrice } = item
           return (
@@ -35,7 +35,12 @@ export default function Card() {
             </div>
           )
         })
-      }
+      } */}
+      {hotels && hotels.length ? hotels?.map((hotel) => {
+        return (
+          <Information hotel={hotel} />
+        )
+      }) : <></>}
     </div>
   )
 }
