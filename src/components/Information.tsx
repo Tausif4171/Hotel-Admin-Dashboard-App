@@ -92,7 +92,7 @@ export default function Information({ hotel }: IProps) {
             </CardActions>
 
 
-            <Button variant="contained" color="primary">
+            <Button variant="contained" color="primary" style={{margin:'10px 0px 20px 0px'}}>
                 View more Information
             </Button>
 
