@@ -11,8 +11,10 @@ export default function Details() {
   console.log({ id }, { getHotel })
 
   const [hotel, setHotel] = useState({})
+  const [loading, setLoading] = useState(false)
   useEffect(() => {
     const fetchHotelData = async () => {
+      setLoading(true)
       const docSnap = await getDoc(getHotel)
       if (docSnap.exists()) {
         const newHotelObj = {
@@ -20,6 +22,7 @@ export default function Details() {
           ...docSnap.data()
         }
         setHotel(newHotelObj)
+        setLoading(false)
       }
     }
     fetchHotelData()
