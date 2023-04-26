@@ -20,7 +20,7 @@ export default function Card() {
   }, [])
   // console.log('hotels', hotels)
   return (
-    <div>
+    <div style={{margin:'10px 60px 10px 60px'}}>
       <h3 style={{ color: "orange" }}>All Hotels</h3>
       {/* {
         hotels.map((item) => {
