@@ -42,13 +42,13 @@ export default function Details() {
 
   return (
     <div>
-      {Object.keys(hotel) && Object.keys(hotel).length ? 
-        ( <>
-        <div>
-          <Information hotel={hotel} detailsPage/>
-        </div>
-          </>)
-: null}
+      {Object.keys(hotel) && Object.keys(hotel).length ?
+        (<>
+          <div>
+            <Information hotel={hotel} detailsPage />
+          </div>
+        </>)
+        : null}
     </div>
   )
 }
