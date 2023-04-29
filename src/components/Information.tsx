@@ -77,11 +77,11 @@ export default function Information({ hotel, detailsPage }: IProps) {
                 title="five star hotel"
             />
 
-            <CardContent>
+            {/* <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
                     {hotel.description}
                 </Typography>
-            </CardContent>
+            </CardContent> */}
 
             <CardActions disableSpacing>
                 <span style={{ backgroundColor: 'grey' }}>{hotel.stars} {" Stars "}</span>&nbsp;
@@ -94,7 +94,7 @@ export default function Information({ hotel, detailsPage }: IProps) {
 
             {detailsPage ? (
                 <>
-                    <p>{hotel.description}</p>
+                    <p style={{textAlign:'left'}}>{hotel.description}<strong>Edit Description</strong></p>
                 </>
             )
                 : (<><Link to={`/hotels/${hotel.id}`}>
@@ -103,9 +103,6 @@ export default function Information({ hotel, detailsPage }: IProps) {
                     </Button>
 
                 </Link></>)}
-
-
-
 
         </Card >
     );
