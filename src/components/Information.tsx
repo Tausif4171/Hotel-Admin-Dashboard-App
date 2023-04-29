@@ -92,14 +92,21 @@ export default function Information({ hotel, detailsPage }: IProps) {
                 <span>Main feature: {hotel.fearure}</span>
             </CardActions>
 
-            <Link to={`/hotels/${hotel.id}`}>
-                <Button variant="contained" color="primary" style={{ margin: '10px 0px 20px 0px' }}>
-                    View more Information
-                </Button>
+            {detailsPage ? (
+                <>
+                    <p>{hotel.description}</p>
+                </>
+            )
+                : (<><Link to={`/hotels/${hotel.id}`}>
+                    <Button variant="contained" color="primary" style={{ margin: '10px 0px 20px 0px' }}>
+                        View more Information
+                    </Button>
 
-            </Link>
+                </Link></>)}
 
 
-        </Card>
+
+
+        </Card >
     );
 }
