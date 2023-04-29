@@ -44,7 +44,7 @@ export default function Details() {
     <div>
       {Object.keys(hotel) && Object.keys(hotel).length ?
         (<>
-          <div>
+          <div style={{ margin: '10px 60px 10px 60px' }}>
             <Information hotel={hotel} detailsPage />
           </div>
         </>)
