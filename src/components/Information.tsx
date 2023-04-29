@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { NewHotelType } from '../types/hotels'
 
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
@@ -52,7 +52,8 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function Information({ hotel, detailsPage }: IProps) {
     console.log('hotels', hotel)
     const classes = useStyles();
-    const [expanded, setExpanded] = React.useState(false);
+    const [expanded, setExpanded] = useState(false);
+    const [editDescription, setEditDescription] = useState(false)
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
@@ -94,7 +95,8 @@ export default function Information({ hotel, detailsPage }: IProps) {
 
             {detailsPage ? (
                 <>
-                    <p style={{textAlign:'left'}}>{hotel.description}<strong>Edit Description</strong></p>
+                    <p style={{textAlign:'left'}}>{hotel.description}<strong onClick={()=>setEditDescription(!editDescription)}>Edit Description</strong></p>
+                    {editDescription?<h6>Edit me</h6>:null}
                 </>
             )
                 : (<><Link to={`/hotels/${hotel.id}`}>
