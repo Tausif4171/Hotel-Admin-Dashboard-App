@@ -20,7 +20,8 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom'
 interface IProps {
-    hotel: NewHotelType
+    hotel: NewHotelType,
+    detailsPage?:boolean
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-export default function Information({ hotel }: IProps) {
+export default function Information({ hotel,detailsPage }: IProps) {
     console.log('hotels', hotel)
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);

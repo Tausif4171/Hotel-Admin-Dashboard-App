@@ -45,7 +45,7 @@ export default function Details() {
       {Object.keys(hotel) && Object.keys(hotel).length ? 
         ( <>
         <div>
-          <Information hotel={hotel} />
+          <Information hotel={hotel} detailsPage/>
         </div>
           </>)
 : null}
