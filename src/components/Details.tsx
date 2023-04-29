@@ -2,6 +2,7 @@ import { doc, getDoc } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { firestore } from '../lib/Controller'
+import './style.css'
 
 export default function Details() {
   const { id } = useParams()
@@ -32,6 +33,11 @@ export default function Details() {
     fetchHotelData()
   },[])
   console.log({ id }, { getHotel },{hotel})
+
+  if(loading){
+    console.log('loading....')
+    return <div className="loader"></div>
+  }
   
   return (
     <div>Details</div>
