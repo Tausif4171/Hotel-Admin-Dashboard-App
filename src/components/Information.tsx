@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { NewHotelType } from '../types/hotels'
 
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
@@ -95,8 +95,9 @@ export default function Information({ hotel, detailsPage }: IProps) {
 
             {detailsPage ? (
                 <>
-                    <p style={{textAlign:'left'}}>{hotel.description}<strong onClick={()=>setEditDescription(!editDescription)}>Edit Description</strong></p>
-                    {editDescription?<h6>Edit me</h6>:null}
+                    <p style={{ textAlign: 'left' }}>{hotel.description}{" "}<strong onClick={() => setEditDescription(!editDescription)}>{!editDescription ? <span>Edit Description</span> : <span>Cancel</span>}</strong></p>
+                    
+                    {editDescription ? <h6>Edit me</h6> : null}
                 </>
             )
                 : (<><Link to={`/hotels/${hotel.id}`}>
