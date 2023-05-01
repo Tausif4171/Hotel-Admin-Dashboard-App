@@ -5,11 +5,13 @@ import FormControl from '@mui/joy/FormControl';
 import FormLabel from '@mui/joy/FormLabel';
 import Textarea from '@mui/joy/Textarea';
 
+interface IProps {
+    editDescription: boolean,
+    setEditDescription: React.Dispatch<React.SetStateAction<boolean>>
+}
 
-export default function Edit() {
-    const [italic, setItalic] = React.useState(false);
-    const [fontWeight, setFontWeight] = React.useState('normal');
-    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+export default function Edit({ editDescription, setEditDescription }: IProps) {
+
     return (
         <FormControl>
             <FormLabel>Please enter the new description below:</FormLabel>
@@ -29,13 +31,13 @@ export default function Edit() {
                     >
 
 
-                        <Button sx={{ ml: 'auto' }}>Update</Button>
+                        <Button sx={{ ml: 'auto' }} onClick={()=>setEditDescription(false)}>Update</Button>
                     </Box>
                 }
                 sx={{
                     minWidth: 300,
-                    fontWeight,
-                    fontStyle: italic ? 'italic' : 'initial',
+                    fontWeight:'normal',
+                    fontStyle: 'italic',
                 }}
             />
         </FormControl>
