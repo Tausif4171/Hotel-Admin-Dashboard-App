@@ -12,8 +12,12 @@ interface IProps {
 
 export default function Edit({ editDescription, setEditDescription }: IProps) {
     const [newDescription, setNewDescription] = React.useState('')
-    console.log({newDescription})
+    console.log({ newDescription })
 
+    function handleUpdate() {
+        setEditDescription(!editDescription)
+    }
+    
     return (
         <FormControl>
             <FormLabel>Please enter the new description below:</FormLabel>
@@ -35,7 +39,7 @@ export default function Edit({ editDescription, setEditDescription }: IProps) {
                     >
 
 
-                        <Button sx={{ ml: 'auto' }} onClick={() => setEditDescription(false)}>Update</Button>
+                        <Button sx={{ ml: 'auto' }} onClick={handleUpdate}>Update</Button>
                     </Box>
                 }
                 sx={{
