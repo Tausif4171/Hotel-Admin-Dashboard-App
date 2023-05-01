@@ -19,6 +19,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom'
+import Edit from './Edit';
 interface IProps {
     hotel: NewHotelType,
     detailsPage?: boolean
@@ -96,8 +97,8 @@ export default function Information({ hotel, detailsPage }: IProps) {
             {detailsPage ? (
                 <>
                     <p style={{ textAlign: 'left' }}>{hotel.description}{" "}<strong onClick={() => setEditDescription(!editDescription)}>{!editDescription ? <span>Edit Description</span> : <span>Cancel</span>}</strong></p>
-                    
-                    {editDescription ? <h6>Edit me</h6> : null}
+
+                    {editDescription ? <Edit /> : null}
                     <button>Delete Hotel</button>
                 </>
             )
