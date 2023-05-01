@@ -11,6 +11,8 @@ interface IProps {
 }
 
 export default function Edit({ editDescription, setEditDescription }: IProps) {
+    const [newDescription, setNewDescription] = React.useState('')
+    console.log({newDescription})
 
     return (
         <FormControl>
@@ -18,6 +20,8 @@ export default function Edit({ editDescription, setEditDescription }: IProps) {
             <Textarea
                 placeholder="Type something here…"
                 minRows={2}
+                value={newDescription}
+                onChange={(e) => setNewDescription(e.target.value)}
                 endDecorator={
                     <Box
                         sx={{
@@ -31,12 +35,12 @@ export default function Edit({ editDescription, setEditDescription }: IProps) {
                     >
 
 
-                        <Button sx={{ ml: 'auto' }} onClick={()=>setEditDescription(false)}>Update</Button>
+                        <Button sx={{ ml: 'auto' }} onClick={() => setEditDescription(false)}>Update</Button>
                     </Box>
                 }
                 sx={{
                     minWidth: 300,
-                    fontWeight:'normal',
+                    fontWeight: 'normal',
                     fontStyle: 'italic',
                 }}
             />
