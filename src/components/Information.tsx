@@ -99,7 +99,10 @@ export default function Information({ hotel, detailsPage }: IProps) {
                     <p style={{ textAlign: 'left' }}>{hotel.description}{" "}<strong onClick={() => setEditDescription(!editDescription)}>{!editDescription ? <span>Edit Description</span> : <span>Cancel</span>}</strong></p>
 
                     {editDescription ? <Edit editDescription={editDescription} setEditDescription={setEditDescription} /> : null}
-                    <button>Delete Hotel</button>
+
+                    <Button variant="contained" color="primary">
+                        Delete Hotel
+                    </Button>
                 </>
             )
                 : (<><Link to={`/hotels/${hotel.id}`}>
