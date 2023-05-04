@@ -12,7 +12,7 @@ export default function Create() {
   return (
     <div>
       <h3>Add a new Hotel</h3>
-      <form onSubmit={(e) => addHotel(e)}>
+      <form onSubmit={(e) => addHotel(e)} style={{ display: 'inline-grid' }}>
         <label>Title</label>
         <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
         <label>Description</label>
@@ -33,8 +33,13 @@ export default function Create() {
         <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
         <label>Price per Night ($)</label>
         <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
-
-        <button>Add Hotel</button>
+        <br />
+        <button style={{
+          background: 'grey',
+          color: 'white',
+          borderRadius: '10px',
+          border: '2px solid grey'
+        }}>Add Hotel</button>
       </form>
     </div>
   )
