@@ -15,6 +15,25 @@ export default function Create() {
       <form onSubmit={(e) => addHotel(e)}>
         <label>Title</label>
         <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+        <label>Description</label>
+        <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+        <label>Main Feature</label>
+        <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+        <label>Image URL link location</label>
+        <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+        <label>Stars Rating</label>
+        <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+        <label>Country</label>
+        <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+        <label>Region</label>
+        <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+        <label>Number of Reviews</label>
+        <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+        <label>Total Price ($)</label>
+        <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+        <label>Price per Night ($)</label>
+        <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+
         <button>Add Hotel</button>
       </form>
     </div>
