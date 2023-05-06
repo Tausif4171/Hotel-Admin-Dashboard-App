@@ -17,7 +17,7 @@ export default function Edit({ editDescription, setEditDescription }: IProps) {
     function handleUpdate() {
         setEditDescription(!editDescription)
     }
-    
+
     return (
         <FormControl>
             <FormLabel>Please enter the new description below:</FormLabel>
